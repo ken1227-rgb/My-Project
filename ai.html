@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pickupline Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            min-width: 200px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        
+        .tip {
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 16px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #3498db;
+        }
+        
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            min-height: 50px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Pickupline Generator</h1>
+    <div class="container">
+        <input type="text" id="wordInput" placeholder="Enter a noun..." />
+        <p class="tip">(Tip: Try a noun like “star”, “book”, or “treasure”)</p>
+        <button onclick="generatePickupLine()">Generate</button>
+        <div class="result" id="pickupLine"></div>
+    </div>
+
+    <script>
+        function generatePickupLine() {
+            const word = document.getElementById('wordInput').value.trim();
+            const outputDiv = document.getElementById('pickupLine');
+
+            // Basic input validation (single word with only letters)
+            if (!/^[a-zA-Z]+$/.test(word)) {
+                outputDiv.innerHTML = "Please enter a single word (a noun). No spaces or numbers.";
+                return;
+            }
+
+            const lines = [
+                `Are you a ${word}? Because every moment with you feels like a dream come true.`,
+                `I must be a ${word}, because I can't stop falling for you!`,
+                `Is your name ${word}? Because my heart skips a beat whenever I see you.`,
+                `If loving you was a ${word}, I’d be the happiest person alive.`,
+                `Can I be your ${word}? Because I’ve been waiting for someone just like you.`,
+                `You must be a ${word}, because you’re the reason I believe in fate.`,
+                `Are we a ${word}? Because together, we make the perfect pair.`,
+                `You’re the ${word} that brightens up my day, every single day.`,
+                `If I had a ${word} for every time I imagined us together, I’d be a millionaire!`,
+                `You’re more than just a ${word}, you’re my destiny.`,
+                `My love for you is as endless as the ${word}s in the universe.`,
+                `Without you, my life feels like a ${word} — incomplete.`,
+                `Are you a ${word}? Because without you, I’m lost.`,
+                `I’d cross a hundred ${word}s just to see you smile.`,
+                `Your smile is more valuable than any ${word} in the world!`,
+                `When I think of love, I think of you, my dear ${word}.`,
+                `Would you be the ${word} to my song?`,
+                `If I could be a ${word}, I’d be your everything.`,
+                `You’re so ${word}, you make even the stars jealous!`,
+                `Let me be the ${word} in your story — forever and always.`,
+                `Are you a ${word}? Because I can't get you out of my head.`,
+                `Without you, life’s like a ${word} without meaning.`,
+                `I’ve seen many ${word}s, but none as beautiful as you.`,
+                `You're not just any ${word}, you're *the* ${word}.`,
+                `If love were a ${word}, you'd be mine.`,
+                `Are you holding a ${word}? Because you just stole my heart.`,
+                `If my heart were a ${word}, it would only beat for you.`,
+                `You + me = the most romantic ${word} ever written.`,
+                `You must be a magical ${word}, because you enchanted me.`,
+                `Even the best ${word}s can't describe how I feel about you.`,
+                `Are you a hidden ${word}? Because I’ve been searching all my life.`,
+                `You're the rare ${word} that completes my collection.`,
+                `If life were a puzzle, you'd be the missing ${word}.`,
+                `My love for you grows faster than a field of ${word}s in spring.`,
+                `Even in a sea of ${word}s, I’d find you.`,
+            ];
+
+            const randomLine = lines[Math.floor(Math.random() * lines.length)];
+            outputDiv.innerHTML = randomLine;
+        }
+    </script>
+
+</body>
+
+</html>

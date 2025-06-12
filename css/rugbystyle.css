@@ -1,0 +1,122 @@
+.team-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+    width: 300px;
+    /* Sets the width of all team images */
+    height: 200px;
+    /* Sets the height of all team images */
+    object-fit: cover;
+    /* Ensures images cover the specified size without distortion */
+}
+
+body {
+    background-image: url('../assets/img/sky.avif');
+    /* Replace with the actual path to your image */
+    background-size: cover;
+    /* Make image cover the whole screen */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Optional: makes the background stay in place while scrolling */
+    color: black;
+    /* Adjust text color for contrast */
+}
+
+
+/* Style links */
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #2980b9;
+    color: #fff;
+    /* use white for better contrast */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+/* Center all lists */
+
+ul,
+ol {
+    list-style-position: inside;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul li,
+ol li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+ul li strong,
+ol li strong {
+    color: #222b35;
+}
+
+h1,
+h2,
+h4 {
+    text-align: center;
+    /* or left for inside sections */
+    margin-bottom: 20px;
+    color: #41678d;
+}
+
+.header h1 {
+    color: darkblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+}
+
+
+/* Make sure all inline text elements line up consistently (optional) */
+
+p,
+li {
+    line-height: 1.5;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.body {
+    position: relative;
+    /* instead of absolute */
+    margin: 160px 100px 0 100px;
+    /* mimic spacing */
+    z-index: 10;
+    /* bring above other absolute elements */
+}
+
+.header {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 150px;
+    position: absolute;
+}
+
+.left {
+    top: 0px;
+    left: 0px;
+    bottom: 170px;
+    width: 150px;
+    position: absolute;
+}
+
+.right {
+    top: 170px;
+    right: 0px;
+    bottom: 170px;
+    width: 150px;
+    position: absolute;
+}
